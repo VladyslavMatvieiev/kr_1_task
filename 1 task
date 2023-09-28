@@ -1,0 +1,27 @@
+object Main {
+  def main(args: Array[String]): Unit = {
+    val numbers_array = Array(1, 2, 3)
+    if (numbers_array.isEmpty) {
+      println("no data")
+    } else {
+      var min = numbers_array.min
+      var max = numbers_array.max
+      var result_number = numbers_array.reduceLeft(_*_)
+      var find_number = numbers_array.contains(2)
+      var AVG_number = (numbers_array.sum)/numbers_array.length
+      if (find_number)
+      {
+        println("the array has 2")
+      }
+      else
+      {
+        println("the array hasn't 2")
+      }
+      println(s"min: $min")
+      println(s"max: $max")
+      println(s"*: $result_number")
+      println(s"AVG: $AVG_number")
+    }
+  }
+}
+Main.main(Array.empty[String])
