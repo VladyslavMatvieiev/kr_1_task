@@ -1,0 +1,15 @@
+class Address(val street: String, val city: String, val zipCode: String) {
+  override def toString: String = s"$street, $city, $zipCode"
+}
+
+class Human(val name: String, val age: Int, val address: Address) {
+  override def toString: String = s"Name: $name, Age: $age, Address: $address"
+}
+
+object Main {
+  def main(args: Array[String]): Unit = {
+    val address = new Address("123 Lvovska St", "Lvov", "72305")
+    val person = new Human("John Doe", 30, address)
+    println(person)
+  }
+}
